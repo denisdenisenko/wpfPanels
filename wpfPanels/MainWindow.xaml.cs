@@ -47,6 +47,28 @@ namespace wpfPanels
                 Margin = new Thickness(5, 0, 0, 0)
             };
 
+            InputCatAge.KeyDown += InputCatAge_KeyDown;
+
+            TextBlock userQuestion = new TextBlock()
+            {
+                Text = "How old is your cat>",
+                FontSize = 18
+            };
+
+            StackPanel horizontalSp = new StackPanel()
+            { Orientation = Orientation.Horizontal, Margin = new Thickness(1, 5, 0, 0) };
+
+            horizontalSp.Children.Add(userQuestion);
+            horizontalSp.Children.Add(InputCatAge);
+
+ 
+            StackPanel MainVerticalStackPanel = new StackPanel();
+
+            MainVerticalStackPanel.Children.Add(horizontalSp);
+            MainVerticalStackPanel.Children.Add(ResultTextBlock);
+            MainVerticalStackPanel.Children.Add(backgroudImage);
+            myMainWindow.Content = MainVerticalStackPanel;
+            
         }
 
         private void InputCatAge_KeyDown(object sender, KeyEventArgs e)
