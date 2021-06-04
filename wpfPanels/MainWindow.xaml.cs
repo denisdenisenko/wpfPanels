@@ -24,5 +24,28 @@ namespace wpfPanels
         {
             InitializeComponent();
         }
+
+        private void InputCatAge_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) 
+            {
+                try
+                {
+                    int inputCatAge = Int32.Parse(InputCatAge.Text);
+                    string humanAge = "";
+                    if (inputCatAge >= 0 && inputCatAge <= 1) 
+                    {
+                        humanAge = "0-15";
+                        ResultTextBlock.Text = "your cat's age is " + humanAge + "age old";
+                    }
+                    else if (inputCatAge >=2 )
+                }
+                catch (Exception myException) 
+                {
+                    MessageBox.Show("Not available");
+                }
+                
+            }
+        }
     }
 }

@@ -15,13 +15,14 @@
                      Width="120"
                      TextAlignment="Center"
                      FontSize="16"
+                     KeyDown="InputCatAge_KeyDown"
                      >
             </TextBox>
         </StackPanel>
         <TextBlock x:Name="ResultTextBlock"
                    Text="Your cat is"
                    FontSize="18"></TextBlock>
-        <Image Source="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"></Image>
+        <Image  Width="500" Source="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"></Image>
 
     </StackPanel>
 </Window>
