@@ -6,23 +6,5 @@
         xmlns:local="clr-namespace:wpfPanels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="How ol is your cat"
-                       FontSize="18"></TextBlock>
-            <TextBox x:Name="InputCatAge"
-                     Margin="5,0,0,0"
-                     Width="120"
-                     TextAlignment="Center"
-                     FontSize="16"
-                     KeyDown="InputCatAge_KeyDown"
-                     >
-            </TextBox>
-        </StackPanel>
-        <TextBlock x:Name="ResultTextBlock"
-                   Text="Your cat is"
-                   FontSize="18"></TextBlock>
-        <Image  Width="500" Source="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"></Image>
 
-    </StackPanel>
 </Window>

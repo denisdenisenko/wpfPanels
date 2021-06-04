@@ -20,9 +20,33 @@ namespace wpfPanels
     /// </summary>
     public partial class MainWindow : Window
     {
+        public TextBlock ResultTextBlock;
+        public TextBox InputCatAge;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            Image backgroudImage = new Image()
+            {
+                Source = new BitmapImage(new Uri("https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg", UriKind.RelativeOrAbsolute))
+            };
+
+            ResultTextBlock = new TextBlock()
+            {
+                Text = "Your cat is ",
+                FontSize = 18
+            };
+
+            InputCatAge = new TextBox()
+            {
+                Width = 120,
+                TextAlignment = TextAlignment.Center
+            ,
+                FontSize = 16,
+                Margin = new Thickness(5, 0, 0, 0)
+            };
+
         }
 
         private void InputCatAge_KeyDown(object sender, KeyEventArgs e)
