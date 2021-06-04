@@ -6,22 +6,22 @@
         xmlns:local="clr-namespace:wpfPanels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="How ol is your cat"
+                       FontSize="18"></TextBlock>
+            <TextBox x:Name="InputCatAge"
+                     Margin="5,0,0,0"
+                     Width="120"
+                     TextAlignment="Center"
+                     FontSize="16"
+                     >
+            </TextBox>
+        </StackPanel>
+        <TextBlock x:Name="ResultTextBlock"
+                   Text="Your cat is"
+                   FontSize="18"></TextBlock>
+        <Image Source="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"></Image>
 
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0"> Button 00</Button>
-        <Button Grid.Column="1" Grid.Row="1">Button 01 </Button>
-        <Button Grid.Column="2" Grid.Row="2">Button 02</Button>
-
-
-    </Grid>
+    </StackPanel>
 </Window>
