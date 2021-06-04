@@ -18,10 +18,13 @@ namespace wpfPanels
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         public TextBlock ResultTextBlock;
         public TextBox InputCatAge;
+        public TextBlock ResultTextBlock2;
+
+
 
         public MainWindow()
         {
@@ -37,6 +40,13 @@ namespace wpfPanels
                 Text = "Your cat is ",
                 FontSize = 18
             };
+
+            ResultTextBlock2 = new TextBlock()
+            {
+                Text = "Your cat is ",
+                FontSize = 18
+            };
+
 
             InputCatAge = new TextBox()
             {
@@ -61,12 +71,14 @@ namespace wpfPanels
             horizontalSp.Children.Add(userQuestion);
             horizontalSp.Children.Add(InputCatAge);
 
- 
+
             StackPanel MainVerticalStackPanel = new StackPanel();
 
             MainVerticalStackPanel.Children.Add(horizontalSp);
             MainVerticalStackPanel.Children.Add(ResultTextBlock);
             MainVerticalStackPanel.Children.Add(backgroudImage);
+            MainVerticalStackPanel.Children.Add(ResultTextBlock2);
+
             myMainWindow.Content = MainVerticalStackPanel;
             
         }
