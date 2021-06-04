@@ -33,12 +33,19 @@ namespace wpfPanels
                 {
                     int inputCatAge = Int32.Parse(InputCatAge.Text);
                     string humanAge = "";
-                    if (inputCatAge >= 0 && inputCatAge <= 1) 
+                    if (inputCatAge >= 0 && inputCatAge <= 1)
                     {
                         humanAge = "0-15";
-                        ResultTextBlock.Text = "your cat's age is " + humanAge + "age old";
+                        ResultTextBlock.Text = "your cat's age is " + humanAge + " age old";
                     }
-                    else if (inputCatAge >=2 )
+                    else if (inputCatAge >= 2 && inputCatAge < 25) 
+                    {
+                        humanAge = (((inputCatAge - 2) * 4) + 24).ToString();
+                        ResultTextBlock.Text = "your cat's age is " + humanAge + " age old";
+                    }
+                    else
+                        ResultTextBlock.Text = "Wrong value";
+
                 }
                 catch (Exception myException) 
                 {
